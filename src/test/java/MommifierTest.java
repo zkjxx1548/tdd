@@ -9,4 +9,11 @@ public class MommifierTest {
         String result = mommifier.insertMommy("apppppplee");
         assertEquals(result, "apppppplee");
     }
+
+    @Test
+    void should_return_input_when_insert_mommy_given_string_of_vowels_more_than_30_percent_but_not_continuous() {
+        Mommifier mommifier = new Mommifier();
+        String result = mommifier.insertMommy("appple");
+        assertEquals(result, "appple");
+    }
 }
